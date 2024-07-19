@@ -1,11 +1,11 @@
 # ตกแต่ง widget ผ่าน selector
 from PyQt6.QtCore import *
 from PyQt6.QtWidgets import *
-#ออกแบบหน้าต่าง
+#ອອກແບບໜ້າຕ່າງ
 class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("โปรแกรมของฉัน")
+        self.setWindowTitle("ໂປຣເເກມທົດລອງ")
         self.setFixedSize(QSize(400,250))
         #สร้าง layout และตั้งค่า
         vbox=QVBoxLayout()
@@ -24,7 +24,7 @@ class MainWindow(QWidget):
         vbox.addWidget(btn2)
         vbox.addWidget(btn3)
 
-#รันโปรแกรม
+#ລັນໂປຣເເກມ
 app=QCoreApplication.instance()
 if app is None:
     app=QApplication([])

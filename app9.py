@@ -2,11 +2,11 @@
 from PyQt6.QtCore import QCoreApplication,QSize,Qt
 from PyQt6.QtWidgets import QApplication,QWidget,QPushButton,QHBoxLayout,QVBoxLayout
 
-#ออกแบบหน้าต่าง
+#ອອກແບບໜ້າຕ່າງ
 class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("โปรแกรมของฉัน")
+        self.setWindowTitle("ໂປຣເເກມທົດລອງ")
         self.setFixedSize(QSize(800,600))
         #สร้าง layout และตั้งค่า
         hbox = QHBoxLayout()
@@ -23,7 +23,7 @@ class MainWindow(QWidget):
         btn.setFixedSize(QSize(100,50))
         layout.addWidget(btn)
 
-#รันโปรแกรม
+#ລັນໂປຣເເກມ
 app=QCoreApplication.instance()
 if app is None:
     app=QApplication([])

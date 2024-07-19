@@ -1,24 +1,24 @@
 # Table Widget
 from PyQt6.QtCore import *
 from PyQt6.QtWidgets import *
-#ออกแบบหน้าต่าง
+#ອອກແບບໜ້າຕ່າງ
 class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("โปรแกรมของฉัน")
+        self.setWindowTitle("ໂປຣເເກມທົດລອງ")
         self.setFixedSize(QSize(350,250))
-        #สร้าง layout และตั้งค่า
+        #ສ້າງ layout ແລະຕັ້ງຄ່າ
         vbox = QVBoxLayout()
         vbox.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.setLayout(vbox)
         #widget
-        headers=["ชื่อ","ตำแหน่ง","เงินเดือน"]
+        headers=["ຊື່","ຕຳເເໜ່ງ","ເງິນເດືອນ"]
         employees=[
-            ('ก้อง','โปรแกรมเมอร์',25000),
-            ('โจ้','กราฟิก',28000),
-            ('นัท','ฝ่ายการตลาด',45000),
-            ('น้ำ','ฝ่ายบัญชี',40000),
-            ('ชาลี','ฝ่ายขาย',50000)
+            ('ຊາຍ','ໂປຣເເກມເມີ້',25000),
+            ('ໂຈ','ກາບຟິກ',28000),
+            ('ໂນ່','ຝ່າຍການຕະຫລາດ',45000),
+            ('ນ້ຳຝົນ','ຝ່າຍບັນຊີ',40000),
+            ('ຟ້າ','ຝ່າຍຂາຍ',50000)
         ]
         table=QTableWidget(len(employees),len(headers))
         #set headers
@@ -39,7 +39,7 @@ class MainWindow(QWidget):
         #add widget to layout
         vbox.addWidget(table)
 
-#รันโปรแกรม
+#ລັນໂປຣເເກມ
 app=QCoreApplication.instance()
 if app is None:
     app=QApplication([])

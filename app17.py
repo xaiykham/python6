@@ -1,13 +1,13 @@
 # Combobox
 from PyQt6.QtCore import *
 from PyQt6.QtWidgets import *
-#ออกแบบหน้าต่าง
+#ອອກແບບໜ້າຕ່າງ
 class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("โปรแกรมของฉัน")
+        self.setWindowTitle("ໂປຣເເກມທົດລອງ")
         self.setFixedSize(QSize(400,250))
-        #สร้าง layout และตั้งค่า
+        #ສະບາຍດີ layout และตั้งค่า
         vbox=QVBoxLayout()
         self.setLayout(vbox)
         #widget
@@ -21,10 +21,10 @@ class MainWindow(QWidget):
     
     def saveData(self):
         index = self.combobox.currentIndex()
-        QMessageBox.information(self,"แจ้งเตือน",'รายการที่เลือก = '+self.data[index])
+        QMessageBox.information(self,"ເເຈ້ງເຕືອນ",'รายการที่เลือก = '+self.data[index])
 
 
-#รันโปรแกรม
+#ລັນໂປຣເເກມ
 app=QCoreApplication.instance()
 if app is None:
     app=QApplication([])

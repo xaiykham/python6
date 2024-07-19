@@ -2,12 +2,12 @@
 from PyQt6.QtCore import QCoreApplication
 from PyQt6.QtWidgets import QApplication,QWidget,QPushButton,QGridLayout
 
-#ออกแบบหน้าต่าง
+#ອອກແບບໜ້າຕ່າງ
 class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("โปรแกรมของฉัน")
-        #สร้าง layout และตั้งค่า
+        self.setWindowTitle("ໂປຣເເກມ")
+        #ສ້າງ layout ແລະຕັ້ງຄ່າ
         grid = QGridLayout()
         self.setLayout(grid)
         #button widget
@@ -21,7 +21,7 @@ class MainWindow(QWidget):
         grid.addWidget(btn3,1,0)
         grid.addWidget(btn4,1,1)
 
-#รันโปรแกรม
+#ລັນໂປຣເເກມ
 app=QCoreApplication.instance()
 if app is None:
     app=QApplication([])

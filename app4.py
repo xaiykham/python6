@@ -2,11 +2,11 @@
 from PyQt6.QtCore import QCoreApplication
 from PyQt6.QtWidgets import QApplication,QWidget,QPushButton,QVBoxLayout
 
-#ออกแบบหน้าต่าง
+#ອອກແບບໜ້າຕ່າງ
 class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("โปรแกรมของฉัน")
+        self.setWindowTitle("ໂປຣເເກມທົດລອງ")
         #สร้าง layout และตั้งค่า
         vbox = QVBoxLayout(self)
         #button widget

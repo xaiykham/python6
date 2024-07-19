@@ -2,7 +2,7 @@
 from PyQt6.QtCore import QCoreApplication
 from PyQt6.QtWidgets import QApplication,QWidget,QPushButton,QHBoxLayout
 
-#ออกแบบหน้าต่าง
+#ອອກແບບໜ້າຕ່າງ
 class MainWindow(QWidget):
     def __init__(self):
         super().__init__()

@@ -1,13 +1,13 @@
 # Messagebox
 from PyQt6.QtCore import *
 from PyQt6.QtWidgets import *
-#ออกแบบหน้าต่าง
+#ອອກແບບໜ້າຕ່າງ
 class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("โปรแกรมของฉัน")
+        self.setWindowTitle("ໂປຣເເກມທົດລອງ")
         self.setFixedSize(QSize(400,250))
-        #สร้าง layout และตั้งค่า
+        #ສ້າງ layout ແລະຕັ້ງຄ່າ
         vbox=QVBoxLayout()
         self.setLayout(vbox)
         #widget
@@ -26,13 +26,13 @@ class MainWindow(QWidget):
     def showMessage(self): #slot
         sender = self.sender()
         if sender==self.btn1:
-            QMessageBox.information(self,"แจ้งเตือน","รายละเอียดโปรแกรม")
+            QMessageBox.information(self,"ເເຈ້ງເຕືອນ","ລາຍລະອຽດໂປຣເເກມ")
         elif sender==self.btn2:
-            QMessageBox.warning(self,"แจ้งเตือน","ข้อควรระวังในการใช้งาน")
+            QMessageBox.warning(self,"ເເຈ້ງເຕືອນ","ຂໍ້ຄວນລະວັງໃນການໃຊ້ງານ")
         elif sender==self.btn3:
-            QMessageBox.critical(self,"แจ้งเตือน","เกิดข้อผิดพลาดในโปรแรกม")
+            QMessageBox.critical(self,"ເເຈ້ງເຕືອນ","ເກີດຂໍ້ຜິດພາດໃນໂປຣເເກມ")
 
-#รันโปรแกรม
+#ລັນໂປຣເເກມ
 app=QCoreApplication.instance()
 if app is None:
     app=QApplication([])

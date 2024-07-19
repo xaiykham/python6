@@ -1,11 +1,11 @@
 # Checkbox
 from PyQt6.QtCore import *
 from PyQt6.QtWidgets import *
-#ออกแบบหน้าต่าง
+#ອອກແບບໜ້າຕ່າງ
 class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("โปรแกรมของฉัน")
+        self.setWindowTitle("ໂປຣເເກມທົດລອງ")
         self.setFixedSize(QSize(400,250))
         #สร้าง layout และตั้งค่า
         vbox=QVBoxLayout()
@@ -13,8 +13,8 @@ class MainWindow(QWidget):
         #widget
         self.check1=QCheckBox("Youtube")
         self.check2=QCheckBox("Facebook")
-        self.lbStatus = QLabel("สถานะ")
-        self.btnSave = QPushButton("บันทึก")
+        self.lbStatus = QLabel("ສະຖານະ")
+        self.btnSave = QPushButton("ບັນທຶກ")
         #signal 
         self.check1.stateChanged.connect(self.checkStatus)
         self.check2.stateChanged.connect(self.checkStatus)
@@ -28,7 +28,7 @@ class MainWindow(QWidget):
     
     def checkStatus(self):
         sender = self.sender()
-        self.lbStatus.setText("สถานะ = " + sender.text()+" : "+str(sender.isChecked()))
+        self.lbStatus.setText("ສະຖານະ = " + sender.text()+" : "+str(sender.isChecked()))
 
     def saveData(self):
         items=[]
@@ -36,11 +36,11 @@ class MainWindow(QWidget):
             items.append(self.check1.text())
         if self.check2.isChecked():
             items.append(self.check2.text())
-        text = "รายการที่เลือก \n"+",".join(items)
-        QMessageBox.information(self,"แจ้งเตือน",text)
+        text = "ລາຍການທີ່ເລືອກ \n"+",".join(items)
+        QMessageBox.information(self,"ເເຈ້ງເຕືອນ",text)
 
 
-#รันโปรแกรม
+#ລັນໂປຣເເກມ
 app=QCoreApplication.instance()
 if app is None:
     app=QApplication([])

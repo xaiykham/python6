@@ -2,11 +2,11 @@
 from PyQt6.QtCore import QCoreApplication,QSize
 from PyQt6.QtWidgets import QApplication,QWidget,QPushButton,QVBoxLayout
 
-#ออกแบบหน้าต่าง
+#ອອກແບບໜ້າຕ່າງ
 class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("โปรแกรมของฉัน")
+        self.setWindowTitle("ໂປຣເເກມທົດລອງ")
         self.setFixedSize(QSize(400,300))
         #สร้าง layout และตั้งค่า
         vbox = QVBoxLayout(self)
@@ -18,7 +18,7 @@ class MainWindow(QWidget):
         vbox.addWidget(btn1)
         vbox.addWidget(btn2)
 
-#รันโปรแกรม
+#ລັນໂປຣເເກມ
 app=QCoreApplication.instance()
 if app is None:
     app=QApplication([])

@@ -1,7 +1,7 @@
 # Multiple Windows
 from PyQt6.QtCore import *
 from PyQt6.QtWidgets import *
-#ออกแบบหน้าต่าง
+#ອອກແບບໜ້າຕ່າງ
 class AboutWindow(QWidget):
     def __init__(self):
         super().__init__()
@@ -37,7 +37,7 @@ class MainWindow(QWidget):
             self.about=AboutWindow()
             self.about.show()
             
-#รันโปรแกรม
+#ລັນໂປຣເເກມ
 app=QCoreApplication.instance()
 if app is None:
     app=QApplication([])

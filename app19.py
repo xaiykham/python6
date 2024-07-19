@@ -1,13 +1,13 @@
 # LineEdit & TextEdit
 from PyQt6.QtCore import *
 from PyQt6.QtWidgets import *
-#ออกแบบหน้าต่าง
+#ອອກແບບໜ້າຕ່າງ
 class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("โปรแกรมของฉัน")
+        self.setWindowTitle("ໂປຣເເກມທົດລອງ")
         self.setFixedSize(QSize(350,250))
-        #สร้าง layout และตั้งค่า
+        #ສ້າງ layout ແລະຕັ້ງຄ່າ
         vbox = QVBoxLayout()
         vbox.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.setLayout(vbox)
@@ -18,17 +18,17 @@ class MainWindow(QWidget):
         vbox.addLayout(grid)
 
         #Input Name
-        grid.addWidget(QLabel('ชื่อ-นามสกุล'),0,0)
+        grid.addWidget(QLabel('ຊື່-ນາມສະກຸນ'),0,0)
         self.editName=QLineEdit()
         self.editName.textChanged.connect(self.previewData)
         grid.addWidget(self.editName,0,1)
         #Input Address
-        grid.addWidget(QLabel('ที่อยู่'),1,0)
+        grid.addWidget(QLabel('ທີ່ຢູ່'),1,0)
         self.editAddress=QTextEdit()
         self.editAddress.textChanged.connect(self.previewData)
         grid.addWidget(self.editAddress,1,1)
 
-        #แสดงผล
+        #ສະເເດງຜົນ
         vbox.addWidget(QLabel('Preview'))
         self.showName = QLabel()
         self.showAddress = QLabel()
@@ -43,7 +43,7 @@ class MainWindow(QWidget):
             self.showAddress.setText(sender.toPlainText())
 
 
-#รันโปรแกรม
+#ລັນໂປຣເເກມ
 app=QCoreApplication.instance()
 if app is None:
     app=QApplication([])

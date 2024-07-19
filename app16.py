@@ -1,19 +1,19 @@
 # Radio Button
 from PyQt6.QtCore import *
 from PyQt6.QtWidgets import *
-#ออกแบบหน้าต่าง
+#ອອກແບບໜ້າຕ່າງ
 class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("โปรแกรมของฉัน")
+        self.setWindowTitle("ໂປຣເເກມທົດລອງ")
         self.setFixedSize(QSize(400,250))
         #สร้าง layout และตั้งค่า
         vbox=QVBoxLayout()
         self.setLayout(vbox)
         #widget
-        self.radio1=QRadioButton("ชาย")
-        self.radio2=QRadioButton("หญิง")
-        btnSave=QPushButton("บันทึก")
+        self.radio1=QRadioButton("ຊາຍ")
+        self.radio2=QRadioButton("ຍິງ")
+        btnSave=QPushButton("ບັນທຶກ")
         #signal 
         btnSave.clicked.connect(self.saveData)
         #add widget to layout
@@ -23,11 +23,11 @@ class MainWindow(QWidget):
     
     def saveData(self):
         if self.radio1.isChecked():
-            QMessageBox.information(self,"แจ้งเตือน","รายการที่เลือก = "+self.radio1.text())
+            QMessageBox.information(self,"ເເຈ້ງເຕືອນ","ລາຍການທີ່ເລືອກ = "+self.radio1.text())
         elif self.radio2.isChecked():
-            QMessageBox.information(self,"แจ้งเตือน","รายการที่เลือก = "+self.radio2.text())
+            QMessageBox.information(self,"ເເຈ້ງເຕືອນ","ລາຍການທີ່ເລືອກ = "+self.radio2.text())
 
-#รันโปรแกรม
+#ລັນໂປຣເເກມ
 app=QCoreApplication.instance()
 if app is None:
     app=QApplication([])

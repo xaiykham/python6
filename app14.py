@@ -1,19 +1,19 @@
 # Input Dialog
 from PyQt6.QtCore import *
 from PyQt6.QtWidgets import *
-#ออกแบบหน้าต่าง
+#ອອກແບບໜ້າຕ່າງ
 class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("โปรแกรมของฉัน")
+        self.setWindowTitle("ໂປຣເເກມທົດລອງ")
         self.setFixedSize(QSize(400,250))
         #สร้าง layout และตั้งค่า
         vbox=QVBoxLayout()
         self.setLayout(vbox)
         #widget
-        self.btn1=QPushButton("ป้อนชื่อ")
-        self.btn2=QPushButton("ป้อนที่อยู่")
-        self.btn3=QPushButton("เลือกเพศ")
+        self.btn1=QPushButton("ປ້ອນຊື່")
+        self.btn2=QPushButton("ປ້ອນທີ່ຢູ່")
+        self.btn3=QPushButton("ເລືອກເພດ")
         #signal 
         self.btn1.clicked.connect(self.showMessage)
         self.btn2.clicked.connect(self.showMessage)
@@ -26,20 +26,20 @@ class MainWindow(QWidget):
     def showMessage(self): #slot
         sender = self.sender()
         if sender == self.btn1:
-           text,submit = QInputDialog.getText(self,"แจ้งเตือน","กรุณาป้อนชื่อของคุณ")
+           text,submit = QInputDialog.getText(self,"ເເຈ້ງເຕືອນ","ກະລຸນາລະບຸຊື່")
            if submit:
-               QMessageBox.information(self,"แจ้งเตือน","สวัสดี "+text)
+               QMessageBox.information(self,"ເເຈ້ງເຕືອນ","ສະບາຍດີ"+text)
         elif sender==self.btn2:
-            text , submit = QInputDialog.getMultiLineText(self,"แจ้งเตือน","กรุณาป้อนที่อยู่ของคุณ")
+            text , submit = QInputDialog.getMultiLineText(self,"ເເຈ້ງເຕືອນ","ລະບຸທີ່ຢູ່ຂອງເຈົ້າ")
             if submit:
-                QMessageBox.information(self,"แจ้งเตือน","ที่อยู่ของคุณ "+text)
+                QMessageBox.information(self,"ເເຈ້ງເຕືອນ","ທີ່ຢູ່ຂອງເຈົ້າ "+text)
         elif sender==self.btn3:
-            items=["ชาย","หญิง","ไม่ระบุ"]
-            text,submit = QInputDialog.getItem(self,"แจ้งเตือน","เลือกเพศ",items)
+            items=["ຊາຍ","ຍິງ","ບໍ່ລະບຸ"]
+            text,submit = QInputDialog.getItem(self,"ເເຈ້ງເຕືອນ","ເລືອກເພດ",items)
             if submit:
-                QMessageBox.information(self,"แจ้งเตือน","เพศของคุณ "+text)
+                QMessageBox.information(self,"ເເຈ້ງເຕືອນ","ເພດຂອງເຈົ້າ "+text)
 
-#รันโปรแกรม
+#ລັນໂປຣເເກມ
 app=QCoreApplication.instance()
 if app is None:
     app=QApplication([])
