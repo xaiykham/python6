@@ -21,7 +21,7 @@ class MainWindow(QWidget):
     
     def saveData(self):
         index = self.combobox.currentIndex()
-        QMessageBox.information(self,"ເເຈ້ງເຕືອນ",'รายการที่เลือก = '+self.data[index])
+        QMessageBox.information(self,"ເເຈ້ງເຕືອນ",'ລາຍການທີ່ເລືອກ = '+self.data[index])
 
 
 #ລັນໂປຣເເກມ

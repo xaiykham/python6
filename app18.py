@@ -7,7 +7,7 @@ class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("ໂປຣເເກມທົດລອງ")
-        #สร้าง layout และตั้งค่า
+        #ສ້າງ layout ແລະຕັ້ງຄ່າ
         hbox=QHBoxLayout()
         self.setLayout(hbox)
         #widget
